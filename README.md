@@ -391,30 +391,6 @@ Basic knowledge of the following is helpful but not mandatory:
 
 ---
 
-# 🚀 Getting Started
-
-Clone the repository:
-
-```bash
-git clone https://github.com/caiogusto2/workshop-adex-dataflow.git
-```
-
-Enter the project directory:
-
-```bash
-cd workshop-adex-dataflow
-```
-
-Start with the environment preparation instructions:
-
-👉 **[`0-pt-config-lab/0-pt-config-lab.md`](./0-pt-config-lab/0-pt-config-lab.md)**
-
-Then continue with the complete workshop:
-
-👉 **[`lab/lab.md`](./lab/lab.md)**
-
----
-
 # 🧪 Workshop Flow
 
 ```text
