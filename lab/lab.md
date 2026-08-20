@@ -1,4 +1,4 @@
-# OCI AI Data Platform
+# ADEX - Data Science + Data Flow + Autonomous + Object Storage
 
 ## 🎯 **Objetivos**
 
