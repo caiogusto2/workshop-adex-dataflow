@@ -527,7 +527,7 @@ import urllib.request
 
 spark = SparkSession.builder.appName("App_Gold").getOrCreate()
 
-oss_path = "oci://bucket01@TROCAR_AQUI_PELO_SEU_NAMESPACE"
+oss_path = "oci://data_bronze@TROCAR_AQUI_PELO_SEU_NAMESPACE"
 wallet_path = "oci://spark_lib@TROCAR_AQUI_PELO_SEU_NAMESPACE"
 
 base_path = f"{oss_path}/parquet"
