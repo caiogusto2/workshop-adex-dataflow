@@ -795,11 +795,7 @@ Clique nos logs, na spark UI, navegue e veja o conteudo dessa run
 
 ## **✅ Laboratório finalizado!**
 
-Parabéns! Você concluiu o hands-on do OCI AI Data Platform (AIDP), construindo as camadas Bronze, Silver e Gold, utilizando o Autonomous Database para persistência e consumo dos dados processados e adaptando a aplicação desenvolvida no AIDP para execução no OCI Data Flow.
-
-Ao longo do laboratório, você passou pela preparação da infraestrutura, desenvolvimento e execução de aplicações PySpark, análise exploratória e qualidade dos dados, construção da arquitetura medalhão, integração com o Autonomous Database, utilização das ferramentas de monitoramento e debug do Spark e, por fim, reutilização do código desenvolvido no AIDP para deployment no OCI Data Flow.
-
-Com isso, você percorreu um fluxo de desenvolvimento fim a fim, desde a experimentação e desenvolvimento no OCI AI Data Platform até a execução da aplicação Spark no OCI Data Flow.
+Parabéns! Você concluiu o hands-on e conseguiu experimentar o do OCI Data Science, OCI Data Flow, Autonomous e Object Storage como plataforma de dados serverless desenvolvimento de projetos spark diversos
 
 
 ## 👥 Agradecimentos
