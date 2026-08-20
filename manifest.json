@@ -1,0 +1,14 @@
+{
+  "workshoptitle": "Workshop Claro ADEX (AIDP + Autonomous + Dataflow)",
+  "help": " ",
+	"tutorials": [
+    {
+      "title": "Configuração do Ambiente de Laboratório",
+      "filename": "0-pt-config-lab/0-pt-config-lab.md"
+    },
+    {
+      "title": "Laboratório - Dataflow + Data Science + Autonomous",
+      "filename": "lab/lab.md"
+    }
+  ]
+}
