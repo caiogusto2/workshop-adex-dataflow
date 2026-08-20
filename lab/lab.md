@@ -161,7 +161,7 @@ command = prepare_command(
 
 %create_session -l python -c $command
 
-##%use_session -s "<Data Flow App OCID>"
+##%use_session -s "TROCAR_AQUI_DATA_FLOW_OCID"
 ```
 
 Aperte ctrl + enter e execute o código para criação da aplicação data flow do tipo session, aguarde a criação. Concluida a criação teremos o seguinte output, informando o OCI da aplicação Data Flow
