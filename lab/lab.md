@@ -161,7 +161,7 @@ command = prepare_command(
 
 %create_session -l python -c $command
 
-##%use_session -s "`TROCAR_AQUI_DATA_FLOW_OCID`"
+##%use_session -s "TROCAR_AQUI_DATA_FLOW_OCID"
 ```
 
 Aperte ctrl + enter e execute o código para criação da aplicação data flow do tipo session, aguarde a criação. Concluida a criação teremos o seguinte output, informando o OCI da aplicação Data Flow
@@ -174,7 +174,7 @@ Agora estamos prontos para começar a montar e codar o nosso pipeline
 
 ## **3️⃣ Criação da aplicação data flow app_bronze**
 
-Agora adicione um novo parágrafo no notebook, copie e cole o código abaixo, alterando o `TROCAR_AQUI_DATA_FLOW_OCID`. No output do log de criação temos o namespace, no meu exemplo é ```idi1o0a010nx```
+Agora adicione um novo parágrafo no notebook, copie e cole o código abaixo, alterando o `TROCAR_AQUI_PELO_SEU_NAMESPACE`. No output do log de criação temos o namespace, no meu exemplo é ```idi1o0a010nx```
 
 ```python
 %%time
@@ -190,7 +190,7 @@ spark = SparkSession.builder.appName("App_Bronze").getOrCreate()
 orders_url = ("https://raw.githubusercontent.com/caiogusto2/workshop-adex-dataflow/main/lab/arquivos_csv/orders.csv")
 customers_url = ("https://raw.githubusercontent.com/caiogusto2/workshop-adex-dataflow/main/lab/arquivos_csv/customers.csv")
 
-base_path = "oci://data_bronze@`TROCAR_AQUI_DATA_FLOW_OCID`/parquet"
+base_path = "oci://data_bronze@TROCAR_AQUI_PELO_SEU_NAMESPACE/parquet"
 
 orders_path = f"{base_path}/orders"
 customers_path = f"{base_path}/customers"
@@ -231,7 +231,7 @@ O %%time na parte de cima de nosso parágrafo adiciona o tempo de execução e o
 
 A nossa aplicação data flow app_bronze esta pronta, agora vamos criar um novo parágrafo afim de realizarmos algumas análises exploratórias sobre esses datasets recém importados para o OCI
 
-Copie e cole o código abaixo e faça a alteração do namespace conforme indicação. `TROCAR_AQUI_DATA_FLOW_OCID`
+Copie e cole o código abaixo e faça a alteração do namespace conforme indicação. `TROCAR_AQUI_PELO_SEU_NAMESPACE`
 
 ```python
 %%time
@@ -239,8 +239,8 @@ Copie e cole o código abaixo e faça a alteração do namespace conforme indica
 #################################
 ## NOME APLICAÇÃO: ANALISE SQL ##
 #################################
-orders_path = "oci://data_bronze@`TROCAR_AQUI_DATA_FLOW_OCID`/parquet/orders"
-customers_path = "oci://data_bronze@`TROCAR_AQUI_DATA_FLOW_OCID`/parquet/customers"
+orders_path = "oci://data_bronze@TROCAR_AQUI_PELO_SEU_NAMESPACE/parquet/orders"
+customers_path = "oci://data_bronze@TROCAR_AQUI_PELO_SEU_NAMESPACE/parquet/customers"
 
 orders_df = spark.read.parquet(orders_path)
 customers_df = spark.read.parquet(customers_path)
@@ -334,7 +334,7 @@ Agora vamos fazer o upload do arquivo Wallet_adb.zip para o nosso bucket ```spar
 
 ![ds14](images/ds14.png)
 
-Copie e cole o conteudo abaixo e faça a alteração da variável `TROCAR_AQUI_DATA_FLOW_OCID`
+Copie e cole o conteudo abaixo e faça a alteração da variável `TROCAR_AQUI_PELO_SEU_NAMESPACE`
 
 ```python
 %%time
@@ -350,8 +350,8 @@ import urllib.request
 spark = SparkSession.builder.appName("App_Silver").getOrCreate()
 
 
-oss_path = "oci://data_bronze@`TROCAR_AQUI_DATA_FLOW_OCID`"
-wallet_path = "oci://spark_lib@`TROCAR_AQUI_DATA_FLOW_OCID`"
+oss_path = "oci://data_bronze@TROCAR_AQUI_PELO_SEU_NAMESPACE"
+wallet_path = "oci://spark_lib@TROCAR_AQUI_PELO_SEU_NAMESPACE"
 
 base_path = f"{oss_path}/parquet"
 catalog_location = f"{oss_path}/staging"
@@ -512,7 +512,7 @@ Caso a execução tenha sido executada com sucesso, teremos o seguinte resultado
 
 Como última etapa de nosso processo, criaremos mais um parágrafo e criaremos um último report, lendo informações do Autonomous DB, realizando o processamento no spark e depois escrevendo novamente os resultados no autonomous db
 
-Copie e cole o conteudo abaixo e faça a alteração da variável `TROCAR_AQUI_DATA_FLOW_OCID`
+Copie e cole o conteudo abaixo e faça a alteração da variável `TROCAR_AQUI_PELO_SEU_NAMESPACE`
 
 ```python
 %%time
@@ -527,8 +527,8 @@ import urllib.request
 
 spark = SparkSession.builder.appName("App_Gold").getOrCreate()
 
-oss_path = "oci://bucket01@`TROCAR_AQUI_DATA_FLOW_OCID`"
-wallet_path = "oci://spark_lib@`TROCAR_AQUI_DATA_FLOW_OCID`"
+oss_path = "oci://bucket01@TROCAR_AQUI_PELO_SEU_NAMESPACE"
+wallet_path = "oci://spark_lib@TROCAR_AQUI_PELO_SEU_NAMESPACE"
 
 base_path = f"{oss_path}/parquet"
 catalog_location = f"{oss_path}/staging"
