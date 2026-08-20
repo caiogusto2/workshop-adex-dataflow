@@ -105,8 +105,6 @@ Agora faremos a atualização do ambiente, no primeiro parágrafo copie e cole o
 
 Clique dentro do parágrafo e aperte crtl + enter para executá-lo
 
-![ds07](images/ds07.png)
-
 Aguarde a conclusão da instalação
 
 ![ds08](images/ds08.png)
